@@ -1,5 +1,98 @@
 let lastSubmitTime = 0;
 
+// ===============================
+// 1. Disable Right Click
+// ===============================
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+
+// ===============================
+// 2. Block common DevTools shortcuts
+// ===============================
+document.addEventListener("keydown", function (e) {
+  // F12
+  if (e.key === "F12") {
+    e.preventDefault();
+    return false;
+  }
+
+  // Ctrl+Shift+I, J, C
+  if (e.ctrlKey && e.shiftKey) {
+    const blocked = ["I", "J", "C"];
+    if (blocked.includes(e.key)) {
+      e.preventDefault();
+      return false;
+    }
+  }
+
+  // Ctrl+U (view source)
+  if (e.ctrlKey && e.key === "u") {
+    e.preventDefault();
+    return false;
+  }
+
+  // Ctrl+S (save page)
+  if (e.ctrlKey && e.key === "s") {
+    e.preventDefault();
+    return false;
+  }
+});
+
+
+// ===============================
+// 3. Disable copy / cut / paste (optional, annoying for forms)
+// ===============================
+document.addEventListener("copy", e => e.preventDefault());
+document.addEventListener("cut", e => e.preventDefault());
+// ⚠️ You may want to REMOVE paste blocking for forms
+// document.addEventListener("paste", e => e.preventDefault());
+
+
+// ===============================
+// 4. DevTools "size detection" trick
+// ===============================
+setInterval(() => {
+  const devtoolsOpen =
+    window.outerWidth - window.innerWidth > 160 ||
+    window.outerHeight - window.innerHeight > 160;
+
+  if (devtoolsOpen) {
+    document.body.innerHTML =
+      "<h1>Access Restricted</h1>";
+  }
+}, 1000);
+
+
+// ===============================
+// 5. Console tamper attempt (weak deterrent)
+// ===============================
+(function () {
+  const element = new Image();
+  Object.defineProperty(element, "id", {
+    get: function () {
+      document.body.innerHTML =
+        "<h1>DevTools Detected</h1>";
+    }
+  });
+
+  console.log(element);
+})();
+
+
+// ===============================
+// 6. Debugger trap (very weak, can be bypassed)
+// ===============================
+setInterval(() => {
+  (function () {
+    try {
+      debugger;
+    } catch (e) {}
+  })();
+}, 2000);
+
+
 // Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyAbWFmOH5nMVNjOi1b8P4DmomXw7d-S1mM",
