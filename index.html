@@ -1,0 +1,853 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaskAgents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="noise"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div class="brand-text">
+          <span class="logo">MASKAGENTS</span>
+          <span class="logo-sub">Multi-AI automation</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#features" class="nav-link">Use Cases</a>
+        <a href="#core" class="nav-link">Core Platform</a>
+        <a href="#formSection" class="nav-link">Waitlist</a>
+        <button onclick="scrollToForm()" class="nav-button">Join Waitlist</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          AI agents working together
+        </div>
+
+        <h1>Build AI systems that actually <span>do the work.</span></h1>
+
+        <p>
+          MaskAgents lets multiple AI agents collaborate across content, social media, software, operations, research, and workflows — so your automation feels like a real digital workforce.
+        </p>
+
+        <div class="hero-buttons">
+          <button onclick="scrollToForm()" class="primary">Get Early Access</button>
+          <a href="#features" class="secondary">Explore Use Cases</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>Multi-agent</strong>
+            <span>Collaborative execution</span>
+          </div>
+          <div class="stat">
+            <strong>Workflow-first</strong>
+            <span>Systems that scale</span>
+          </div>
+          <div class="stat">
+            <strong>Waitlist only</strong>
+            <span>Private early access</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="dashboard-card glass">
+          <div class="dashboard-top">
+            <span class="chip live">Live orchestration</span>
+            <span class="chip">v1 preview</span>
+          </div>
+
+          <div class="workflow">
+            <div class="node active">Plan</div>
+            <div class="line"></div>
+            <div class="node active">Execute</div>
+            <div class="line"></div>
+            <div class="node active">Verify</div>
+            <div class="line"></div>
+            <div class="node">Deploy</div>
+          </div>
+
+          <div class="mini-panels">
+            <div class="mini-panel">
+              <span>Tasks running</span>
+              <strong>42 active</strong>
+            </div>
+            <div class="mini-panel">
+              <span>Automation layers</span>
+              <strong>8 connected</strong>
+            </div>
+            <div class="mini-panel wide">
+              <span>Agent marketplace</span>
+              <strong>Download specialized agents like apps</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" id="features">
+      <div class="section-header">
+        <div class="section-kicker">Use cases</div>
+        <h2>Where MaskAgents fits</h2>
+        <p>One platform. Many agent systems. Each use case is built to replace repetitive online work with autonomous execution.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="card">
+          <div class="card-icon">01</div>
+          <h3>Autonomous Marketing Systems</h3>
+          <p>Agents research audiences, generate text/image/video content, schedule posts, A/B test ads, and optimize campaigns automatically.</p>
+          <div class="card-note">“Give product → agents run the entire marketing funnel.”</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">02</div>
+          <h3>Business Operations Automation</h3>
+          <p>Handle invoice generation, email replies, support, CRM updates, and sales pipeline management with an AI COO layer.</p>
+          <div class="card-note">For small businesses that need an always-on operations team.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">03</div>
+          <h3>Software Engineering Teams</h3>
+          <p>Planner, coder, tester, reviewer, and deployment agents work like a real dev team to produce full apps from a prompt.</p>
+          <div class="card-note">Built for founders, teams, and technical builders.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">04</div>
+          <h3>Data Intelligence & Research</h3>
+          <p>Scrape and analyze data, summarize market trends, generate reports, and track competitors with an AI research department.</p>
+          <div class="card-note">Fast intelligence for decisions, strategy, and analysis.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">05</div>
+          <h3>E-commerce Automation</h3>
+          <p>Generate product listings, optimize pricing, create ads, predict inventory needs, and handle customer responses automatically.</p>
+          <div class="card-note">Turn store operations into an autonomous workflow.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">06</div>
+          <h3>Media & Content Studios</h3>
+          <p>Use script, video, thumbnail, posting, and analytics agents to automate YouTube and TikTok content channels.</p>
+          <div class="card-note">A complete content engine, not just a generator.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">07</div>
+          <h3>Personal AI Operating System</h3>
+          <p>Manage calendars, email, reminders, tasks, and productivity with a Jarvis-like personal execution layer.</p>
+          <div class="card-note">Your personal assistant with memory and action.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">08</div>
+          <h3>Healthcare Support Systems</h3>
+          <p>Support scheduling, medical record summaries, insurance workflows, admin optimization, and patient communication in a safe way.</p>
+          <div class="card-note">Built for workflow efficiency, not diagnosis.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">09</div>
+          <h3>Finance & Business Intelligence</h3>
+          <p>Track expenses, generate financial reports, detect fraud alerts, summarize research, and analyze risk faster.</p>
+          <div class="card-note">Turn business data into actionable intelligence.</div>
+        </div>
+
+        <div class="card wide-card">
+          <div class="card-icon">10</div>
+          <h3>Internet-Wide Automation Layer</h3>
+          <p>Agents interact with APIs across platforms, automate web and app workflows, and execute tasks across services as a middleware layer for the internet.</p>
+          <div class="card-note">The long-term vision: AI agents as the execution layer of the web.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="core" id="core">
+      <div class="section-header">
+        <div class="section-kicker">Core platform</div>
+        <h2>What MaskAgents is becoming</h2>
+        <p>A full digital workforce platform for orchestration, execution, memory, monitoring, and control.</p>
+      </div>
+
+      <div class="core-grid">
+        <div class="core-card">
+          <h3>Multi-Agent Orchestration Engine</h3>
+          <p>Agents can talk to each other, delegate tasks, and operate in hierarchies like planner → executor → verifier.</p>
+        </div>
+        <div class="core-card">
+          <h3>Workflow Builder</h3>
+          <p>No-code pipelines let users connect agents like nodes with triggers and automation logic.</p>
+        </div>
+        <div class="core-card">
+          <h3>Tool Integration Layer</h3>
+          <p>Connect to social APIs, email, databases, web scraping, and third-party SaaS tools.</p>
+        </div>
+        <div class="core-card">
+          <h3>Agent Marketplace</h3>
+          <p>Users can download agent packs like apps, including marketing, founder, ops, and support packs.</p>
+        </div>
+        <div class="core-card">
+          <h3>Memory System</h3>
+          <p>Long-term context storage, user personalization, and project history tracking keep agents smarter over time.</p>
+        </div>
+        <div class="core-card">
+          <h3>Autonomous Execution Mode</h3>
+          <p>Run scheduled and event-triggered workflows without supervision, with safety controls built in.</p>
+        </div>
+        <div class="core-card">
+          <h3>Human-in-the-Loop Control</h3>
+          <p>Approval checkpoints and audit logs make execution safer, traceable, and easier to trust.</p>
+        </div>
+        <div class="core-card">
+          <h3>Real-Time Monitoring</h3>
+          <p>See logs, performance, costs, and live agent activity in one command center.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="waitlist" id="formSection">
+      <div class="waitlist-header">
+        <div class="section-kicker">Private access</div>
+        <h2>Join the Private Waitlist</h2>
+        <p>Be among the first to use MaskAgents and help shape the platform as it grows.</p>
+      </div>
+
+      <div class="form-shell glass">
+        <form id="waitlistForm">
+          <div class="row">
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" type="email" placeholder="you@company.com" required>
+            </div>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="text" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="field">
+              <label for="github">GitHub Link</label>
+              <input id="github" type="text" placeholder="github.com/username">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="intent">What do you want MaskAgents to do?</label>
+            <select id="intent">
+              <option>AI automation workflows</option>
+              <option>Social media automation</option>
+              <option>AI content generation</option>
+              <option>Developer API tools</option>
+              <option>Agent marketplace</option>
+              <option>Business automation</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="urgency">Timeline</label>
+              <select id="urgency">
+                <option>ASAP</option>
+                <option>1–3 months</option>
+                <option>3–6 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="role">Role</label>
+              <select id="role">
+                <option>Developer</option>
+                <option>Founder</option>
+                <option>Marketer</option>
+                <option>Agency</option>
+                <option>Student</option>
+                <option>Business Owner</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="pay">Pricing Intent</label>
+            <select id="pay">
+              <option>Yes, I will pay</option>
+              <option>Maybe</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="suggestion">Suggestion</label>
+            <textarea id="suggestion" placeholder="What should we build for you?"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Join Waitlist</button>
+          <p id="msg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>MaskAgents © 2026</span>
+      <span>Built for the autonomous internet</span>
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaskAgents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="noise"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div class="brand-text">
+          <span class="logo">MASKAGENTS</span>
+          <span class="logo-sub">Autonomous AI workforce</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#platform" class="nav-link">Platform</a>
+        <a href="#system" class="nav-link">System</a>
+        <a href="#formSection" class="nav-link">Waitlist</a>
+        <button onclick="scrollToForm()" class="nav-button">Join Waitlist</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          AI agents planning, executing, and verifying
+        </div>
+
+        <h1>Turn prompts into a <span>digital workforce.</span></h1>
+
+        <p>
+          MaskAgents is not a chat tool. It is an autonomous system where planner, executor, verifier, and specialist agents work together across marketing, software, ops, research, finance, and more.
+        </p>
+
+        <div class="hero-buttons">
+          <button onclick="scrollToForm()" class="primary">Get Early Access</button>
+          <a href="#platform" class="secondary">See the system</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>Planner → Executor → Verifier</strong>
+            <span>Human-like workflow chain</span>
+          </div>
+          <div class="stat">
+            <strong>Tasks, tools, memory</strong>
+            <span>Everything connected</span>
+          </div>
+          <div class="stat">
+            <strong>Autonomous mode</strong>
+            <span>Run without supervision</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="dashboard-card glass">
+          <div class="dashboard-top">
+            <span class="chip live">Live orchestration</span>
+            <span class="chip">Settings enabled</span>
+            <span class="chip">Memory on</span>
+          </div>
+
+          <div class="orchestrator">
+            <div class="stage">
+              <div class="stage-head">
+                <span class="stage-dot planner"></span>
+                <strong>Planner</strong>
+                <span class="stage-tag">Defines goals</span>
+              </div>
+              <p>Breaks big requests into ordered tasks, priorities, and routes.</p>
+            </div>
+
+            <div class="arrow-row">
+              <div class="arrow-line"></div>
+              <div class="arrow">➜</div>
+              <div class="arrow-line"></div>
+            </div>
+
+            <div class="stage">
+              <div class="stage-head">
+                <span class="stage-dot executor"></span>
+                <strong>Executor</strong>
+                <span class="stage-tag">Runs tools</span>
+              </div>
+              <p>Calls APIs, writes content, updates systems, and performs actions.</p>
+            </div>
+
+            <div class="arrow-row">
+              <div class="arrow-line"></div>
+              <div class="arrow">➜</div>
+              <div class="arrow-line"></div>
+            </div>
+
+            <div class="stage">
+              <div class="stage-head">
+                <span class="stage-dot verifier"></span>
+                <strong>Verifier</strong>
+                <span class="stage-tag">Checks output</span>
+              </div>
+              <p>Audits results, catches mistakes, and requests corrections if needed.</p>
+            </div>
+          </div>
+
+          <div class="hero-mini-grid">
+            <div class="mini-widget">
+              <span>Tasks queued</span>
+              <strong>18</strong>
+            </div>
+            <div class="mini-widget">
+              <span>Active agents</span>
+              <strong>7</strong>
+            </div>
+            <div class="mini-widget">
+              <span>Tool connections</span>
+              <strong>24</strong>
+            </div>
+            <div class="mini-widget">
+              <span>Audit logs</span>
+              <strong>On</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-section" id="platform">
+      <div class="section-header">
+        <div class="section-kicker">How it works</div>
+        <h2>Each module does a task, not just a description.</h2>
+        <p>
+          This layout shows the product as a real operating system for AI agents: every tile has a job, every arrow shows flow, and every setting changes behavior.
+        </p>
+      </div>
+
+      <div class="system-shell glass">
+        <div class="system-topbar">
+          <div class="system-title">
+            <span class="dot"></span>
+            MaskAgents Control Center
+          </div>
+          <div class="system-switches">
+            <span class="switch on">Autonomous</span>
+            <span class="switch on">Human approval</span>
+            <span class="switch">Debug mode</span>
+          </div>
+        </div>
+
+        <div class="system-grid">
+          <div class="node planner large">
+            <div class="node-head">
+              <span class="node-icon">P</span>
+              <strong>Planner Agent</strong>
+              <span class="badge">Strategy</span>
+            </div>
+            <p>Reads the request, decides the workflow, and assigns tasks to specialist agents.</p>
+            <ul>
+              <li>Goal decomposition</li>
+              <li>Task sequencing</li>
+              <li>Priority routing</li>
+            </ul>
+          </div>
+
+          <div class="flow-arrow down">↓</div>
+
+          <div class="agent-line">
+            <div class="agent-card">
+              <span class="tiny-label">Marketing</span>
+              <strong>Audience research</strong>
+              <p>Finds users, segments audiences, and plans funnels.</p>
+            </div>
+            <div class="agent-card">
+              <span class="tiny-label">Content</span>
+              <strong>Text + image + video</strong>
+              <p>Generates campaigns, creatives, and post variations.</p>
+            </div>
+            <div class="agent-card">
+              <span class="tiny-label">Ops</span>
+              <strong>Email + CRM</strong>
+              <p>Replies, updates records, and manages workflows.</p>
+            </div>
+          </div>
+
+          <div class="flow-arrow down">↓</div>
+
+          <div class="node executor">
+            <div class="node-head">
+              <span class="node-icon">E</span>
+              <strong>Execution Layer</strong>
+              <span class="badge">Tools</span>
+            </div>
+            <p>Connects APIs, databases, browsers, SaaS tools, and automation triggers.</p>
+            <div class="tool-row">
+              <span>APIs</span>
+              <span>Web</span>
+              <span>Email</span>
+              <span>CRM</span>
+              <span>Files</span>
+              <span>Cloud</span>
+            </div>
+          </div>
+
+          <div class="flow-arrow down">↓</div>
+
+          <div class="node verifier">
+            <div class="node-head">
+              <span class="node-icon">V</span>
+              <strong>Verifier + Safety</strong>
+              <span class="badge">Control</span>
+            </div>
+            <p>Checks outputs, requests approval where needed, and writes audit logs for every action.</p>
+            <div class="verify-row">
+              <div class="verify-pill approved">Approved</div>
+              <div class="verify-pill pending">Needs review</div>
+              <div class="verify-pill logged">Logged</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="usecases" id="system">
+      <div class="section-header">
+        <div class="section-kicker">Use cases</div>
+        <h2>Every industry gets its own working agent stack.</h2>
+        <p>
+          These are not static cards. They are operational systems showing what each stack actually does inside MaskAgents.
+        </p>
+      </div>
+
+      <div class="usecase-grid">
+        <article class="usecase-card marketing">
+          <div class="usecase-head">
+            <span class="usecase-icon">01</span>
+            <div>
+              <h3>Autonomous Marketing</h3>
+              <p>Research → create → schedule → test → optimize</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Audience research</span>
+            <span class="flow">→</span>
+            <span>Content generation</span>
+            <span class="flow">→</span>
+            <span>Campaign execution</span>
+            <span class="flow">→</span>
+            <span>Ad optimization</span>
+          </div>
+        </article>
+
+        <article class="usecase-card ops">
+          <div class="usecase-head">
+            <span class="usecase-icon">02</span>
+            <div>
+              <h3>Business Operations</h3>
+              <p>Invoices, replies, support, CRM, sales</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Receive request</span>
+            <span class="flow">→</span>
+            <span>Draft response</span>
+            <span class="flow">→</span>
+            <span>Update systems</span>
+            <span class="flow">→</span>
+            <span>Close loop</span>
+          </div>
+        </article>
+
+        <article class="usecase-card dev">
+          <div class="usecase-head">
+            <span class="usecase-icon">03</span>
+            <div>
+              <h3>Software Engineering Teams</h3>
+              <p>Plan, code, test, review, deploy</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Architecture</span>
+            <span class="flow">→</span>
+            <span>Coding</span>
+            <span class="flow">→</span>
+            <span>Testing</span>
+            <span class="flow">→</span>
+            <span>Deployment</span>
+          </div>
+        </article>
+
+        <article class="usecase-card research">
+          <div class="usecase-head">
+            <span class="usecase-icon">04</span>
+            <div>
+              <h3>Data Intelligence</h3>
+              <p>Scrape, analyze, summarize, report</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Collect data</span>
+            <span class="flow">→</span>
+            <span>Analyze trends</span>
+            <span class="flow">→</span>
+            <span>Build report</span>
+            <span class="flow">→</span>
+            <span>Share insight</span>
+          </div>
+        </article>
+
+        <article class="usecase-card ecommerce">
+          <div class="usecase-head">
+            <span class="usecase-icon">05</span>
+            <div>
+              <h3>E-commerce</h3>
+              <p>Listings, pricing, ads, inventory, support</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Product ingest</span>
+            <span class="flow">→</span>
+            <span>Optimize price</span>
+            <span class="flow">→</span>
+            <span>Create ads</span>
+            <span class="flow">→</span>
+            <span>Handle buyers</span>
+          </div>
+        </article>
+
+        <article class="usecase-card media">
+          <div class="usecase-head">
+            <span class="usecase-icon">06</span>
+            <div>
+              <h3>Media Studios</h3>
+              <p>Scripts, thumbnails, publishing, analytics</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Write script</span>
+            <span class="flow">→</span>
+            <span>Generate visuals</span>
+            <span class="flow">→</span>
+            <span>Post content</span>
+            <span class="flow">→</span>
+            <span>Track growth</span>
+          </div>
+        </article>
+
+        <article class="usecase-card personal">
+          <div class="usecase-head">
+            <span class="usecase-icon">07</span>
+            <div>
+              <h3>Personal AI OS</h3>
+              <p>Email, calendar, reminders, tasks</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Read schedule</span>
+            <span class="flow">→</span>
+            <span>Handle email</span>
+            <span class="flow">→</span>
+            <span>Set reminders</span>
+            <span class="flow">→</span>
+            <span>Execute tasks</span>
+          </div>
+        </article>
+
+        <article class="usecase-card healthcare">
+          <div class="usecase-head">
+            <span class="usecase-icon">08</span>
+            <div>
+              <h3>Healthcare Support</h3>
+              <p>Scheduling, summaries, insurance, admin</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Appointment request</span>
+            <span class="flow">→</span>
+            <span>Record summary</span>
+            <span class="flow">→</span>
+            <span>Insurance workflow</span>
+            <span class="flow">→</span>
+            <span>Patient follow-up</span>
+          </div>
+        </article>
+
+        <article class="usecase-card finance">
+          <div class="usecase-head">
+            <span class="usecase-icon">09</span>
+            <div>
+              <h3>Finance Intelligence</h3>
+              <p>Expenses, reporting, fraud, risk, research</p>
+            </div>
+          </div>
+          <div class="usecase-flow">
+            <span>Track spend</span>
+            <span class="flow">→</span>
+            <span>Detect risk</span>
+            <span class="flow">→</span>
+            <span>Summarize data</span>
+            <span class="flow">→</span>
+            <span>Report insights</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="waitlist" id="formSection">
+      <div class="waitlist-header">
+        <div class="section-kicker">Private access</div>
+        <h2>Join the Private Waitlist</h2>
+        <p>Be among the first to use MaskAgents and help shape the platform as it becomes a digital workforce layer.</p>
+      </div>
+
+      <div class="form-shell glass">
+        <form id="waitlistForm">
+          <div class="row">
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" type="email" placeholder="you@company.com" required>
+            </div>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="text" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="field">
+              <label for="github">GitHub Link</label>
+              <input id="github" type="text" placeholder="github.com/username">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="intent">What do you want MaskAgents to do?</label>
+            <select id="intent">
+              <option>AI automation workflows</option>
+              <option>Social media automation</option>
+              <option>AI content generation</option>
+              <option>Developer API tools</option>
+              <option>Agent marketplace</option>
+              <option>Business automation</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="urgency">Timeline</label>
+              <select id="urgency">
+                <option>ASAP</option>
+                <option>1–3 months</option>
+                <option>3–6 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="role">Role</label>
+              <select id="role">
+                <option>Developer</option>
+                <option>Founder</option>
+                <option>Marketer</option>
+                <option>Agency</option>
+                <option>Student</option>
+                <option>Business Owner</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="pay">Pricing Intent</label>
+            <select id="pay">
+              <option>Yes, I will pay</option>
+              <option>Maybe</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="suggestion">Suggestion</label>
+            <textarea id="suggestion" placeholder="What should we build for you?"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Join Waitlist</button>
+          <p id="msg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>MaskAgents © 2026</span>
+      <span>Built for autonomous execution</span>
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
